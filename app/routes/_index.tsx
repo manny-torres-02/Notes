@@ -41,10 +41,10 @@ export default function Index() {
 
       <div className="mx-auto mt-16 max-w-7xl text-center">
   <Link
-    to="/notes"
+    to="/todo"
     className="text-xl text-blue-600 underline"
   >
-    Notes
+    Todo
   </Link>
 </div>
 
