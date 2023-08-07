@@ -1,15 +1,18 @@
 import React from "react";
 
-
-function Todo(props: {name:string}) {
-       return (
+// This is type script
+//  so you will need to set the props for name to type string
+// so you will need to set the props for completed to type bool
+function Todo(props: any) {
+  return (
     <li className="todo stack-small">
       <div className="c-cb">
-        <input id="todo-0" type="checkbox" defaultChecked={true} />
-        <label className="todo-label" htmlFor="todo-0">
+        <input id={props.id} type="checkbox" defaultChecked={props.completed} />
+        <label className="todo-label" htmlFor={props.id}>
           {props.name}
         </label>
       </div>
+
       <div className="btn-group">
         <button type="button" className="btn">
           Edit <span className="visually-hidden">Eat</span>
@@ -20,7 +23,6 @@ function Todo(props: {name:string}) {
       </div>
     </li>
   );
-  }
-  
-  export default Todo;
-  
+}
+
+export default Todo;

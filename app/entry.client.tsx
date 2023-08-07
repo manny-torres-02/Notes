@@ -8,11 +8,26 @@ import { RemixBrowser } from "@remix-run/react";
 import { startTransition, StrictMode } from "react";
 import { hydrateRoot } from "react-dom/client";
 
-startTransition(() => {
+startTransition(( ) => {
+
+  interface Task {
+    id: string;
+    name: string; 
+    completed: boolean;
+  }
+
+  const DATA = [
+    { id: "todo-0", name: "Eat", completed: true },
+    { id: "todo-1", name: "Sleep", completed: false },
+    { id: "todo-2", name: "Repeat", completed: false },
+  ];
+  
+
+  
   hydrateRoot(
     document,
     <StrictMode>
-      <RemixBrowser />
+      <RemixBrowser tasks={DATA}/>
     </StrictMode>
   );
 });
