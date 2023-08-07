@@ -12,13 +12,13 @@ const Form = (props: any) => {
   }
   
 
-  function addTask(name) {
-    alert(name);
+  // function addTask(name) {
+  //   alert(name);
+  // }
+  function handleChange(e) {
+    setName(e.target.value);
   }
   
-  function handleChange(e) {
-    console.log(e.target.value);
-  }
   
   return (
     <form onSubmit={handleSubmit}>
